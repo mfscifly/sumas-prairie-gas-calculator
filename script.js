@@ -1,16 +1,23 @@
-//add an event listener for the button press
-document.querySelector("#convert").addEventListener("click", simpleConvert);
 
-//when the button is pressed, take the value from the corresponding button, perform the conversion, and input the value in the opposite field
+document.querySelector("#convert").addEventListener("click", whichConversion);
 
+function whichConversion(){
+    if (document.querySelector("#cad").value) {
+        convertFromCad();
+    } else if (document.querySelector("#usd").value) {
+        convertFromUsd();
+    }
+}
 
-
-function simpleConvert(){
+function convertFromCad(){
     let priceInCanada = document.querySelector("#cad").value;
     document.querySelector("#usd").value = conversionInCanada(priceInCanada);
 }
 
-
+function convertFromUsd(){
+    let priceInUSA = document.querySelector("#usd").value;
+    document.querySelector("#cad").value = conversionInUsa(priceInUSA);
+}
 
 // conversion maths below, from Canada
 
