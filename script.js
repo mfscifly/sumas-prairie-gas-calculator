@@ -59,3 +59,5 @@ document.querySelector("#calculate").addEventListener("click", calcSavings);
 function calcSavings(){
     document.querySelector("#savings").innerText = `$${Math.floor((document.querySelector("#cad-cost").value - (convertUsdToCad(document.querySelector("#usd-cost").value)*convertGallonsToLitres(1))) * document.querySelector("#tank-size").value*100)/100} CAD`;
 }
+
+//to add - if calcSavings result is negative, display "trip not worth it, it will cost X more in the USA"

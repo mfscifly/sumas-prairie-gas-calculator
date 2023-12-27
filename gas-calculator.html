@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gas Savings Calculator</title>
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Sumas Prairie Gas Tools</h1>
-    <h2>Gas Price Converter</h2>
-    <form>
-        <label for="usd">USD/Gal</label>
-        <input id="usd" type="text">
-        <label for="cad">CAD/L</label>
-        <input id="cad" type="text">
-        <input type="button" id="convert" value="convert">
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gas Savings Calculator</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Sumas Prairie Gas Tools</h1>
+        <h2>Gas Price Converter</h2>
+        <p>Enter either price in USA or Canada below.</p>
+        <form>
+            <label for="usd">USD/gal</label>
+            <input id="usd" type="text">
+            <label for="cad">CAD/L</label>
+            <input id="cad" type="text">
+            <input type="button" id="convert" value="convert">
+        </form>
 
-    <h2>Gas Savings Calculator</h2>
-    <form>
-        <label for="tank-size">Tank Size</label>
-        <input id="tank-size" type="number">
-        <label for="usd-cost">American Cost (USD/gal)</label>
-        <input id="usd-cost" type="text">
-        <label for="cad-cost">Canadian Cost (CAD/L)</label>
-        <input id="cad-cost" type="text">
-        <input type="button" id="calculate" value="calculate">
-    </form>
-    <h3>Estimated Savings:</h3>
-    <span id="savings"></span>
-    <h3>Current Wait</h3>
-    <img src="http://images.drivebc.ca/bchighwaycam/pub/cameras/170.jpg?ts=1396761523" alt="border lineup at Sumas Crossing">
+        <h2>Gas Savings Calculator</h2>
+        <p>Enter all below fields to calculate estimated savings of travelling to the US for fuel.</p>
+        <form>
+            <label for="tank-size">Tank Size</label>
+            <input id="tank-size" type="number">
+            <label for="usd-cost">American Cost (USD/gal)</label>
+            <input id="usd-cost" type="text">
+            <label for="cad-cost">Canadian Cost (CAD/L)</label>
+            <input id="cad-cost" type="text">
+            <input type="button" id="calculate" value="calculate">
+        </form>
+        <h3>Estimated Savings:</h3>
+        <span id="savings"></span>
+        <h3>Current Wait</h3>
+        <img src="http://images.drivebc.ca/bchighwaycam/pub/cameras/170.jpg?ts=1396761523" alt="border lineup at Sumas Crossing">
 
 
-<script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+        <footer>
+            <a href="https://aboutdaniel.netlify.app/">Daniel Cabrera</a>
+            <span>2023</span>
+        </footer>
+    </body>
 </html>
