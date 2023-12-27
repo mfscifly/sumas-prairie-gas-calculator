@@ -2,10 +2,14 @@
 document.querySelector("#convert").addEventListener("click", whichConversion);
 
 function whichConversion(){
-    if (document.querySelector("#cad").value) {
+    if (document.querySelector("#cad").value && document.querySelector("#usd").value) {
+        alert ("too much to convert");
+    } else if (document.querySelector("#cad").value) {
         convertFromCad();
     } else if (document.querySelector("#usd").value) {
         convertFromUsd();
+    } else {
+        alert ("nothing to convert");
     }
 }
 
@@ -45,4 +49,13 @@ function convertGallonsToLitres(gal){
 
 function conversionInUsa(costPerGal){
     return "$"+Math.round((convertUsdToCad(costPerGal)*convertGallonsToLitres(1))*100)/100+" cad/litre";
+}
+
+// SAVINGS CALCULATOR - below
+// convert USA price to CDN, then subtract the prevailing CDN price, then multiply by size of gas tank. then round.
+
+document.querySelector("#calculate").addEventListener("click", calcSavings);
+
+function calcSavings(){
+    document.querySelector("#savings").innerText = `$${Math.floor((document.querySelector("#cad-cost").value - (convertUsdToCad(document.querySelector("#usd-cost").value)*convertGallonsToLitres(1))) * document.querySelector("#tank-size").value*100)/100} CAD`;
 }

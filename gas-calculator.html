@@ -7,14 +7,28 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Sumas Prairie Gas Savings Calculator</h1>
+    <h1>Sumas Prairie Gas Tools</h1>
+    <h2>Gas Price Converter</h2>
     <form>
         <label for="usd">USD/Gal</label>
         <input id="usd" type="text">
         <label for="cad">CAD/L</label>
         <input id="cad" type="text">
-        <input type="button" id="convert" value="calculate">
+        <input type="button" id="convert" value="convert">
     </form>
+
+    <h2>Gas Savings Calculator</h2>
+    <form>
+        <label for="tank-size">Tank Size</label>
+        <input id="tank-size" type="number">
+        <label for="usd-cost">American Cost (USD/gal)</label>
+        <input id="usd-cost" type="text">
+        <label for="cad-cost">Canadian Cost (CAD/L)</label>
+        <input id="cad-cost" type="text">
+        <input type="button" id="calculate" value="calculate">
+    </form>
+    <h3>Estimated Savings:</h3>
+    <span id="savings"></span>
 
 <script src="script.js"></script>
 </body>
