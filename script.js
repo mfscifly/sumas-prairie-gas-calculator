@@ -1,3 +1,17 @@
+// api below
+
+let rate = 0;
+
+fetch('https://v6.exchangerate-api.com/v6/438c32fe52e2d246e758724b/latest/USD')
+    .then (res=>res.json())
+    .then (data=> {
+        console.log(data);
+        rate = data.conversion_rates.CAD;
+        document.querySelector("#ratetoday").innerText=`Today's USD-CAD exchange rate: ${rate}`;
+    })
+    .catch (err=>{
+        console.log(`error ${err}`);
+    });
 
 document.querySelector("#convert").addEventListener("click", whichConversion);
 
@@ -30,17 +44,17 @@ function conversionInCanada(costPerL){
 }
 
 function convertCadToUsd(cad) {
-    return cad*.74;
+    return cad*(1/rate);
 }
 
 function convertLitresToGallons(litres){
     return litres*3.785;
-}
+}z
 
 // conversion maths below, from USA
 
 function convertUsdToCad(usd){
-    return usd*1.35;
+    return usd*rate;
 }
 
 function convertGallonsToLitres(gal){
