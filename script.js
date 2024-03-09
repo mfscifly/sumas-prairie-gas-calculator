@@ -49,7 +49,7 @@ function convertCadToUsd(cad) {
 
 function convertLitresToGallons(litres){
     return litres*3.785;
-}z
+}
 
 // conversion maths below, from USA
 

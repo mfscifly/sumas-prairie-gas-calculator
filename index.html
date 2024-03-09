@@ -9,30 +9,36 @@
     <body>
         <h1>Sumas Prairie Gas Tools</h1>
         <h2 id="ratetoday"></h2>
-        <h2>Gas Price Converter</h2>
-        <p>Enter either price in USA or Canada below.</p>
-        <form>
-            <label for="usd">USD/gal</label>
-            <input id="usd" type="text">
-            <label for="cad">CAD/L</label>
-            <input id="cad" type="text">
-            <input type="button" id="convert" value="convert">
-        </form>
 
-        <h2>Gas Savings Calculator</h2>
-        <p>Enter all below fields to calculate estimated savings of travelling to the US for fuel.</p>
-        <form>
-            <label for="tank-size">Tank Size</label>
-            <input id="tank-size" type="number">
-            <label for="usd-cost">American Cost (USD/gal)</label>
-            <input id="usd-cost" type="text">
-            <label for="cad-cost">Canadian Cost (CAD/L)</label>
-            <input id="cad-cost" type="text">
-            <input type="button" id="calculate" value="calculate">
-        </form>
-        <h3>Estimated Savings:</h3>
-        <span id="savings"></span>
-        <h3>Current Wait</h3>
+        <section>
+            <h2>Gas Price Converter</h2>
+            <p>Enter either price in USA <strong>or</strong> Canada below (not both).</p>
+            <form>
+                <label for="usd">USD/gal</label>
+                <input id="usd" type="text">
+                <label for="cad">CAD/L</label>
+                <input id="cad" type="text">
+                <input type="button" id="convert" value="convert">
+            </form>
+        </section>
+
+        <section>
+            <h2>Gas Savings Calculator</h2>
+            <p>Enter <strong>all below fields</strong> to calculate estimated savings of travelling to the US for fuel.</p>
+            <form>
+                <label for="tank-size">Tank Size</label>
+                <input id="tank-size" type="number">
+                <label for="usd-cost">American Cost (USD/gal)</label>
+                <input id="usd-cost" type="text">
+                <label for="cad-cost">Canadian Cost (CAD/L)</label>
+                <input id="cad-cost" type="text">
+                <input type="button" id="calculate" value="calculate">
+            </form>
+            <h3>Estimated Savings:</h3>
+            <span id="savings"></span>
+        </section>
+
+        <h3>Current Wait:</h3>
         <img src="http://images.drivebc.ca/bchighwaycam/pub/cameras/170.jpg?ts=1396761523" alt="border lineup at Sumas Crossing South">
         <img src="http://images.wsdot.wa.gov/nw/009vc09781.jpg?ts=1396761523" alt="border lineup at Sumas Crossing North">
 
@@ -40,7 +46,7 @@
         <script src="script.js"></script>
         <footer>
             <a href="https://aboutdaniel.netlify.app/">Daniel Cabrera</a>
-            <span>2023</span>
+            <span>2024</span>
         </footer>
     </body>
 </html>

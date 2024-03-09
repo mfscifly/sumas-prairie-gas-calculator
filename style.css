@@ -1,3 +1,9 @@
 img {
     height: 400px;
 }
+
+section {
+    border: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
