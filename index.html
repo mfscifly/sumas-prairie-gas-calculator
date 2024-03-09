@@ -3,39 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gas Savings Calculator</title>
+        <title>Sumas Prairie Gas Tools</title>
         <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Sumas Prairie Gas Tools</h1>
-        <h2 id="ratetoday"></h2>
+        <header>
+            <h1>Sumas Prairie Gas Tools</h1>
+        </header>
+
+        <section>
+            <h2 id="ratetoday">Today's USD-CAD exchange rate:</h2>
+            <span>Source: <a href="https://www.exchangerate-api.com/" target="_blank" rel="noopener noreferrer">ExchangeRate-API</a></span>
+        </section>
 
         <section>
             <h2>Gas Price Converter</h2>
-            <p>Enter either price in USA <strong>or</strong> Canada below (not both).</p>
+            <p>Ever wondered what the price of fuel in the USD/gallon means in CAD/litre? Or the other way around?</p>
+            <p><strong>Instructions:</strong> Enter either price in USA <strong>or</strong> Canada below (not both).</p>
             <form>
-                <label for="usd">USD/gal</label>
+                <label for="usd">USD/gal:</label>
                 <input id="usd" type="text">
-                <label for="cad">CAD/L</label>
+                <label for="cad">CAD/L:</label>
                 <input id="cad" type="text">
-                <input type="button" id="convert" value="convert">
+                <input type="button" id="convert" value="Convert">
             </form>
+            <span>For real time gas prices visit: <a href="https://www.gasbuddy.com/gaspricemap?country=can&lat=49.03014655491847&lng=-122.2837060750275&z=12" target="_blank" rel="noopener noreferrer">GasBuddy</a></span>
         </section>
 
         <section>
             <h2>Gas Savings Calculator</h2>
-            <p>Enter <strong>all below fields</strong> to calculate estimated savings of travelling to the US for fuel.</p>
+            <p>Want to know how much you'll save by travelling to the USA to fill up?</p>
+            <p><strong>Instructions:</strong> Enter <strong>all below fields</strong> to calculate estimated savings.</p>
             <form>
-                <label for="tank-size">Tank Size</label>
+                <label for="tank-size">Tank Size(L):</label>
                 <input id="tank-size" type="number">
-                <label for="usd-cost">American Cost (USD/gal)</label>
+                <label for="usd-cost">American Cost (USD/gal):</label>
                 <input id="usd-cost" type="text">
-                <label for="cad-cost">Canadian Cost (CAD/L)</label>
+                <label for="cad-cost">Canadian Cost (CAD/L):</label>
                 <input id="cad-cost" type="text">
-                <input type="button" id="calculate" value="calculate">
+                <input type="button" id="calculate" value="Calculate">
             </form>
+            <span>For real time gas prices visit: <a href="https://www.gasbuddy.com/gaspricemap?country=can&lat=49.03014655491847&lng=-122.2837060750275&z=12" target="_blank" rel="noopener noreferrer">GasBuddy</a></span>
             <h3>Estimated Savings:</h3>
-            <span id="savings"></span>
         </section>
 
         <h3>Current Wait:</h3>
@@ -46,7 +58,7 @@
         <script src="script.js"></script>
         <footer>
             <a href="https://aboutdaniel.netlify.app/">Daniel Cabrera</a>
-            <span>2024</span>
+            <span>©2024</span>
         </footer>
     </body>
 </html>

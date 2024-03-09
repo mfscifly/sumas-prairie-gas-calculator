@@ -13,17 +13,21 @@ fetch('https://v6.exchangerate-api.com/v6/438c32fe52e2d246e758724b/latest/USD')
         console.log(`error ${err}`);
     });
 
+if (localStorage.getItem("tankSize")){
+    document.querySelector("#tank-size").value = localStorage.getItem("tankSize");
+}
+
 document.querySelector("#convert").addEventListener("click", whichConversion);
 
 function whichConversion(){
     if (document.querySelector("#cad").value && document.querySelector("#usd").value) {
-        alert ("too much to convert");
+        alert ("Please just enter one field");
     } else if (document.querySelector("#cad").value) {
         convertFromCad();
     } else if (document.querySelector("#usd").value) {
         convertFromUsd();
     } else {
-        alert ("nothing to convert");
+        alert ("Please enter at least one field");
     }
 }
 
@@ -40,7 +44,7 @@ function convertFromUsd(){
 // conversion maths below, from Canada
 
 function conversionInCanada(costPerL){
-    return "$"+Math.round((convertCadToUsd(costPerL)*convertLitresToGallons(1))*100)/100+" USD/gallon";
+    return Math.round((convertCadToUsd(costPerL)*convertLitresToGallons(1))*100)/100;
 }
 
 function convertCadToUsd(cad) {
@@ -62,7 +66,7 @@ function convertGallonsToLitres(gal){
 }
 
 function conversionInUsa(costPerGal){
-    return "$"+Math.round((convertUsdToCad(costPerGal)*convertGallonsToLitres(1))*100)/100+" cad/litre";
+    return Math.round((convertUsdToCad(costPerGal)*convertGallonsToLitres(1))*100)/100;
 }
 
 // SAVINGS CALCULATOR - below
@@ -71,7 +75,15 @@ function conversionInUsa(costPerGal){
 document.querySelector("#calculate").addEventListener("click", calcSavings);
 
 function calcSavings(){
-    document.querySelector("#savings").innerText = `$${Math.floor((document.querySelector("#cad-cost").value - (convertUsdToCad(document.querySelector("#usd-cost").value)*convertGallonsToLitres(1))) * document.querySelector("#tank-size").value*100)/100} CAD`;
+    localStorage.setItem("tankSize",document.querySelector("#tank-size").value);
+    let cadPrice = document.querySelector("#cad-cost").value;
+    let usdPrice = document.querySelector("#usd-cost").value;
+    let tankSize = document.querySelector("#tank-size").value;
+    let savings = Math.floor((cadPrice-(convertUsdToCad(usdPrice)*convertGallonsToLitres(1)))*tankSize*100)/100;
+    if (savings<=0){
+        return document.querySelector("h3").innerText = `Trip not worth it. It will cost $${savings*-1} more in the USA.`
+    }
+    document.querySelector("h3").innerText = `Estimated Savings: $${savings}`
 }
 
 //to add - if calcSavings result is negative, display "trip not worth it, it will cost X more in the USA"
