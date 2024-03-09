@@ -70,7 +70,6 @@ function conversionInUsa(costPerGal){
 }
 
 // SAVINGS CALCULATOR - below
-// convert USA price to CDN, then subtract the prevailing CDN price, then multiply by size of gas tank. then round.
 
 document.querySelector("#calculate").addEventListener("click", calcSavings);
 

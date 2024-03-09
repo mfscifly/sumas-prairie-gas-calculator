@@ -1,5 +1,9 @@
 img {
-    height: 400px;
+    max-width: 90%;
+}
+
+img[src="http://images.wsdot.wa.gov/nw/009vc09781.jpg?ts=1396761523"]{
+    width: 420px;
 }
 
 section {
@@ -14,8 +18,45 @@ section {
 
 h1 {
     font-size: 3rem;
+    color: white;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
 }
 
 input[type='number']{
     width: 80px;
 } 
+
+label {
+    font-weight: 600;
+}
+
+
+body {
+    background-color: rgb(46, 46, 46);
+}
+
+footer a, footer span {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media all and (max-width: 879px){
+    input {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media all and (max-width: 556px) {
+    header h1 {
+        font-size: 2.25rem;
+    }
+}
