@@ -15,3 +15,7 @@ section {
 h1 {
     font-size: 3rem;
 }
+
+input[type='number']{
+    width: 80px;
+} 

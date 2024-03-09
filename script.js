@@ -85,5 +85,3 @@ function calcSavings(){
     }
     document.querySelector("h3").innerText = `Estimated Savings: $${savings}`
 }
-
-//to add - if calcSavings result is negative, display "trip not worth it, it will cost X more in the USA"
