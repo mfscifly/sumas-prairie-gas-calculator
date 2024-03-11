@@ -16,18 +16,6 @@ fetch('https://v6.exchangerate-api.com/v6/438c32fe52e2d246e758724b/latest/USD')
     });
 
 
-//border crossing api below
-
-fetch("https://wsdot.wa.gov/Traffic/api/BorderCrossings/BorderCrossingsREST.svc/GetBorderCrossingsAsJson?AccessCode=61d8b407-1e24-4f05-b115-0f86bd2aec68")
-    .then (res=>res.json())
-    .then (data=>{
-        console.log(data);
-    })
-    .catch (err=>{
-        console.log(`error ${err}`);
-    });
-
-
 if (localStorage.getItem("tankSize")){
     document.querySelector("#tank-size").value = localStorage.getItem("tankSize");
 }
