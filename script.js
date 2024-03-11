@@ -2,6 +2,8 @@
 
 let rate = 0;
 
+//exchange rate API below
+
 fetch('https://v6.exchangerate-api.com/v6/438c32fe52e2d246e758724b/latest/USD')
     .then (res=>res.json())
     .then (data=> {
@@ -12,6 +14,19 @@ fetch('https://v6.exchangerate-api.com/v6/438c32fe52e2d246e758724b/latest/USD')
     .catch (err=>{
         console.log(`error ${err}`);
     });
+
+
+//border crossing api below
+
+fetch("http://wsdot.wa.gov/Traffic/api/BorderCrossings/BorderCrossingsREST.svc/GetBorderCrossingsAsJson")
+    .then (res=>res.json())
+    .then (data=>{
+        console.log(data);
+    })
+    .catch (err=>{
+        console.log(`error ${err}`);
+    });
+
 
 if (localStorage.getItem("tankSize")){
     document.querySelector("#tank-size").value = localStorage.getItem("tankSize");
