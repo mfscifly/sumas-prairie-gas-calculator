@@ -25,9 +25,9 @@
             <p><strong>Instructions:</strong> Enter either price in USA <strong>or</strong> Canada below (not both).</p>
             <form>
                 <label for="usd">USD/gal:</label>
-                <input id="usd" type="number">
+                <input id="usd" type="number" inputmode="decimal">
                 <label for="cad">CAD/L:</label>
-                <input id="cad" type="number">
+                <input id="cad" type="number" inputmode="decimal">
                 <input type="button" id="convert" value="Convert">
             </form>
             <span>For real time gas prices visit: <a href="https://www.gasbuddy.com/gaspricemap?country=can&lat=49.03014655491847&lng=-122.2837060750275&z=12" target="_blank" rel="noopener noreferrer">GasBuddy</a></span>
@@ -38,12 +38,12 @@
             <p>Want to know how much you'll save by travelling to the USA to fill up?</p>
             <p><strong>Instructions:</strong> Enter <strong>all below fields</strong> to calculate estimated savings.</p>
             <form>
-                <label for="tank-size">Tank Size(L):</label>
-                <input id="tank-size" type="number">
+                <label for="tank-size">Tank Size (L):</label>
+                <input id="tank-size" type="number" inputmode="decimal">
                 <label for="usd-cost">American Cost (USD/gal):</label>
-                <input id="usd-cost" type="number">
+                <input id="usd-cost" type="number" inputmode="decimal">
                 <label for="cad-cost">Canadian Cost (CAD/L):</label>
-                <input id="cad-cost" type="number">
+                <input id="cad-cost" type="number" inputmode="decimal">
                 <input type="button" id="calculate" value="Calculate">
             </form>
             <span>For real time gas prices visit: <a href="https://www.gasbuddy.com/gaspricemap?country=can&lat=49.03014655491847&lng=-122.2837060750275&z=12" target="_blank" rel="noopener noreferrer">GasBuddy</a></span>

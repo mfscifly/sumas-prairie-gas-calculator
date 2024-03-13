@@ -4,12 +4,21 @@ let rate = 0;
 
 //exchange rate API below
 
-fetch('https://v6.exchangerate-api.com/v6/438c32fe52e2d246e758724b/latest/USD')
+// fetch('https://v6.exchangerate-api.com/v6/438c32fe52e2d246e758724b/latest/USD')
+//     .then (res=>res.json())
+//     .then (data=> {
+//         console.log(data);
+//         rate = data.conversion_rates.CAD;
+//         document.querySelector("#ratetoday").innerText=`Today's USD-CAD exchange rate: ${rate}`;
+//     })
+//     .catch (err=>{
+//         console.log(`error ${err}`);
+//     });
+
+fetch('https://bwt.cbp.gov/api/waittimes')
     .then (res=>res.json())
     .then (data=> {
         console.log(data);
-        rate = data.conversion_rates.CAD;
-        document.querySelector("#ratetoday").innerText=`Today's USD-CAD exchange rate: ${rate}`;
     })
     .catch (err=>{
         console.log(`error ${err}`);
