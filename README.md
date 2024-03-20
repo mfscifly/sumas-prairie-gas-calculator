@@ -3,7 +3,7 @@ If you live near the 🇨🇦/🇺🇸 border, you are well aware that the price
 
 **Link to project:** https://gastools.netlify.app
 
-![alt tag](https://gastools.netlify.app/preview.png)
+<img src="https://gastools.netlify.app/preview.png" alt="preview" height="200px">
 
 ## How It's Made:
 
@@ -11,11 +11,11 @@ If you live near the 🇨🇦/🇺🇸 border, you are well aware that the price
 
 Used ExchangeRate-API for real-time exchange rate data. Border camera footage is pulled from DriveBC and Washington State Department of Travel. Conversions and calculations are done using JavaScript. 
 
-## Optimizations
+## Optimizations:
 
 Once the original product was created in JavaScript, I was able to reduce the amount of code by 50% by refactoring it using Object Oriented Programming. I also stored fuel tank sizes locally using localStorage to save the user time.
 
-## Future Optimizations
+## Future Optimizations:
 
 In future will expand this app to have all 🇨🇦/🇺🇸 border crossings available, to open up the potential user base. I will also pull estimated wait time (in minutes) in addition to having border camera footage available to users.
 
