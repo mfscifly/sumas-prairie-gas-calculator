@@ -3,7 +3,7 @@ If you live near the 🇨🇦/🇺🇸 border, you are well aware that the price
 
 **Link to project:** https://gastools.netlify.app
 
-<img src="https://gastools.netlify.app/preview.png" alt="preview" height="200px">
+![recording](https://github.com/mfscifly/sumas-prairie-gas-calculator/assets/138173334/9cd30865-0ddf-43bf-b974-90c2254934bb)
 
 ## How It's Made:
 
@@ -15,9 +15,7 @@ Used ExchangeRate-API for real-time exchange rate data. Border camera footage is
 
 Once the original product was created in JavaScript, I was able to reduce the amount of code by 50% by refactoring it using Object Oriented Programming. I also stored fuel tank sizes locally using localStorage to save the user time.
 
-## Future Optimizations:
-
-In future will expand this app to have all 🇨🇦/🇺🇸 border crossings available, to open up the potential user base. I will also pull estimated wait time (in minutes) in addition to having border camera footage available to users.
+In the future I will expand this app to have all 🇨🇦/🇺🇸 border crossings available, to open up the potential user base. I will also pull estimated wait time (in minutes) in addition to having border camera footage available to users.
 
 ## Lessons Learned:
 
