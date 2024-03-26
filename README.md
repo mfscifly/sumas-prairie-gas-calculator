@@ -3,7 +3,7 @@ If you live near the 🇨🇦/🇺🇸 border, you are well aware that the price
 
 **Link to project:** https://gastools.netlify.app
 
-![recording](https://github.com/mfscifly/sumas-prairie-gas-calculator/assets/138173334/9cd30865-0ddf-43bf-b974-90c2254934bb)
+![gastools recording](https://github.com/mfscifly/sumas-prairie-gas-calculator/assets/138173334/4bfbf669-6a23-47d0-bb00-04a4aab7acfb)
 
 ## How It's Made:
 
